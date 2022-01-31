@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Readex+Pro:wght@200;300;400&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <title></title>
+        <style>
+        body {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 20px;
+        }
+        
+        .info-card{
+            width: 700px;
+            height: 450px;
+            margin: 0 auto;
+            margin-top: 150px;
+            margin-bottom: 50PX;
+        
+            background: #f9d8ea;
+            border-radius: 20px;
+        
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+        #initials {
+            height: 20px;
+            border: 2px solid black;
+            border-radius: 2px;
+        }
+        button {
+            border: none;
+    padding: 15px 47px;
+    border-radius: 5px;
+    background: #9b83e2;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+              justify-content: center;
+              align-items: center;
+        }
+        #main2 {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        .btn {
+            display: flex;
+  justify-content: center;
+  align-items: center;
+        }
+        #gen {
+            height: 20px;
+            border: 2px solid black;
+            border-radius: 2px;
+            margin-left: 50px;
+        }
+            </style>
+     
+    </head>
+    <body>
+        <div id="main" class="info-card">
+        <h1>FIND YOUR AVATAR <br></h1> 
+        <div id="main2">
+            <div>
+         <div id="name">Enter Your Name</div>
+        <input type="text" id="initials"><br>
+    </div>
+    <div>
+        <div id="gender">Enter Your Gender of avatar you want</div>
+        <input list="hosting-plan" type="text" id="gen">
+
+        <datalist id="hosting-plan">
+            <option>male</option>
+            <option>female</option>
+            <option>human</option>
+            <option>identicon</option>
+            <option>initials</option>
+            <option>bottts</option>
+            <option>avataaars</option>
+            <option>jdenticon</option>
+            <option>gridy</option>
+            <option>micah</option>
+        </datalist>
+    </div>
+    </div>
+    <div><img width="150" height="150" class="img-change" src="https://img.icons8.com/external-linector-flat-linector/64/000000/external-avatar-man-avatar-linector-flat-linector-3.png"></div>
+   
+    </div>
+       <div class="btn"><button>Click here</button></div>
+    
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+     <!--  <script>
+   $(document).ready(function(){
+       $('button').click(function(){
+       const name = $('#initials').val();
+       alert(name);
+       $('.img-change').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+       const b=$('.img-change');
+       console.log(b);
+   });
+});
+    </script>--> 
+<!--
+    <script>
+        $(document).ready(function(){
+         $('button').click(function(){
+          const name = $('#initials').val();
+        
+          $('.img-change').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+          const b = $('.img-change');
+          console.log(b);
+       
+         });
+        });
+       </script>
+       -->
+       <script>
+            $(document).ready(function(){
+         $('button').click(function(){
+          const name = $('#initials').val();
+          const gender = $('#gen').val();
+
+          $('.img-change').attr('src',`https://avatars.dicebear.com/api/${gender}/${name}.svg`);
+          const b = $('.img-change');
+          console.log(b);
+       
+         });
+        });
+       </script>
+</html>
